@@ -54,8 +54,8 @@ function GlobeMarker({ country, onClick, isSelected }: GlobeMarkerProps) {
       >
         <sphereGeometry args={[0.04, 16, 16]} />
         <meshStandardMaterial
-          color={isSelected ? '#e879f9' : hovered ? '#22d3ee' : '#06b6d4'}
-          emissive={isSelected ? '#e879f9' : hovered ? '#22d3ee' : '#06b6d4'}
+          color={isSelected ? '#4ade80' : hovered ? '#22c55e' : '#16a34a'}
+          emissive={isSelected ? '#4ade80' : hovered ? '#22c55e' : '#16a34a'}
           emissiveIntensity={isSelected ? 1 : hovered ? 0.8 : 0.5}
         />
       </mesh>
@@ -63,7 +63,7 @@ function GlobeMarker({ country, onClick, isSelected }: GlobeMarkerProps) {
       <mesh rotation={[Math.PI / 2, 0, 0]}>
         <ringGeometry args={[0.05, 0.07, 32]} />
         <meshBasicMaterial
-          color={isSelected ? '#e879f9' : '#06b6d4'}
+          color={isSelected ? '#4ade80' : '#16a34a'}
           transparent
           opacity={isSelected ? 0.6 : 0.3}
         />
@@ -497,7 +497,7 @@ function Earth({ countries, onCountryClick, selectedCountry }: EarthProps) {
       <mesh>
         <sphereGeometry args={[2.005, 36, 18]} />
         <meshBasicMaterial
-          color="#22d3ee"
+          color="#22c55e"
           wireframe
           transparent
           opacity={0.06}
@@ -520,7 +520,7 @@ function Earth({ countries, onCountryClick, selectedCountry }: EarthProps) {
             varying vec3 vNormal;
             void main() {
               float intensity = pow(0.6 - dot(vNormal, vec3(0.0, 0.0, 1.0)), 2.0);
-              gl_FragColor = vec4(0.2, 0.8, 1.0, 1.0) * intensity;
+              gl_FragColor = vec4(0.2, 0.8, 0.4, 1.0) * intensity;
             }
           `}
           side={THREE.BackSide}
@@ -552,7 +552,7 @@ function Scene({ countries, onCountryClick, selectedCountry }: EarthProps) {
     <>
       <ambientLight intensity={0.4} />
       <directionalLight position={[5, 3, 5]} intensity={1.2} />
-      <pointLight position={[-10, -10, -10]} intensity={0.3} color="#06b6d4" />
+      <pointLight position={[-10, -10, -10]} intensity={0.3} color="#16a34a" />
       
       <Stars
         radius={100}
@@ -612,11 +612,11 @@ function FallbackGlobe({ countries, onCountryClick, selectedCountry }: GlobeProp
         
         {/* Grid lines */}
         <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
-          <circle cx="50" cy="50" r="45" fill="none" stroke="hsl(185 80% 50% / 0.2)" strokeWidth="0.5" />
-          <ellipse cx="50" cy="50" rx="45" ry="20" fill="none" stroke="hsl(185 80% 50% / 0.15)" strokeWidth="0.5" />
-          <ellipse cx="50" cy="50" rx="30" ry="45" fill="none" stroke="hsl(185 80% 50% / 0.15)" strokeWidth="0.5" />
-          <line x1="50" y1="5" x2="50" y2="95" stroke="hsl(185 80% 50% / 0.15)" strokeWidth="0.5" />
-          <line x1="5" y1="50" x2="95" y2="50" stroke="hsl(185 80% 50% / 0.15)" strokeWidth="0.5" />
+          <circle cx="50" cy="50" r="45" fill="none" stroke="hsl(142 70% 50% / 0.2)" strokeWidth="0.5" />
+          <ellipse cx="50" cy="50" rx="45" ry="20" fill="none" stroke="hsl(142 70% 50% / 0.15)" strokeWidth="0.5" />
+          <ellipse cx="50" cy="50" rx="30" ry="45" fill="none" stroke="hsl(142 70% 50% / 0.15)" strokeWidth="0.5" />
+          <line x1="50" y1="5" x2="50" y2="95" stroke="hsl(142 70% 50% / 0.15)" strokeWidth="0.5" />
+          <line x1="5" y1="50" x2="95" y2="50" stroke="hsl(142 70% 50% / 0.15)" strokeWidth="0.5" />
         </svg>
       </div>
       
