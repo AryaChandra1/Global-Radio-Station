@@ -6,52 +6,52 @@
 
 @layer base {
   :root {
-    /* Green Theme - Perfect for globe visualization */
-    --background: 150 50% 6%;
-    --foreground: 150 40% 96%;
-    --card: 150 47% 10%;
-    --card-foreground: 150 40% 96%;
-    --popover: 150 47% 10%;
-    --popover-foreground: 150 40% 96%;
+    /* Cyber Space Theme - Perfect for globe visualization */
+    --background: 225 50% 6%;
+    --foreground: 210 40% 96%;
+    --card: 225 47% 10%;
+    --card-foreground: 210 40% 96%;
+    --popover: 225 47% 10%;
+    --popover-foreground: 210 40% 96%;
     
-    /* Primary - Vibrant Green for interactive elements */
-    --primary: 142 70% 50%;
-    --primary-foreground: 150 50% 6%;
+    /* Primary - Electric Cyan for interactive elements */
+    --primary: 185 80% 50%;
+    --primary-foreground: 225 50% 6%;
     
-    /* Secondary - Deep green */
-    --secondary: 150 47% 15%;
-    --secondary-foreground: 150 40% 90%;
+    /* Secondary - Deep space blue */
+    --secondary: 225 47% 15%;
+    --secondary-foreground: 210 40% 90%;
     
-    --muted: 150 35% 18%;
-    --muted-foreground: 150 30% 60%;
+    --muted: 225 35% 18%;
+    --muted-foreground: 210 30% 60%;
     
-    /* Accent - Bright lime green for highlights */
-    --accent: 120 70% 50%;
+    /* Accent - Vibrant magenta for highlights */
+    --accent: 320 85% 55%;
     --accent-foreground: 0 0% 100%;
     
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
     
-    --border: 150 35% 20%;
-    --input: 150 35% 15%;
-    --ring: 142 70% 50%;
+    --border: 225 35% 20%;
+    --input: 225 35% 15%;
+    --ring: 185 80% 50%;
 
     /* Chart colors */
-    --chart-1: 142 70% 50%;
-    --chart-2: 120 70% 50%;
-    --chart-3: 160 65% 45%;
-    --chart-4: 100 75% 55%;
-    --chart-5: 180 60% 50%;
+    --chart-1: 185 80% 50%;
+    --chart-2: 320 85% 55%;
+    --chart-3: 145 70% 45%;
+    --chart-4: 45 90% 55%;
+    --chart-5: 280 75% 60%;
 
     /* Sidebar */
-    --sidebar: 150 47% 8%;
-    --sidebar-foreground: 150 40% 96%;
-    --sidebar-primary: 142 70% 50%;
-    --sidebar-primary-foreground: 150 50% 6%;
-    --sidebar-accent: 150 35% 18%;
-    --sidebar-accent-foreground: 150 40% 90%;
-    --sidebar-border: 150 35% 20%;
-    --sidebar-ring: 142 70% 50%;
+    --sidebar: 225 47% 8%;
+    --sidebar-foreground: 210 40% 96%;
+    --sidebar-primary: 185 80% 50%;
+    --sidebar-primary-foreground: 225 50% 6%;
+    --sidebar-accent: 225 35% 18%;
+    --sidebar-accent-foreground: 210 40% 90%;
+    --sidebar-border: 225 35% 20%;
+    --sidebar-ring: 185 80% 50%;
 
     /* Fonts */
     --font-sans: 'Space Grotesk', sans-serif;
@@ -62,8 +62,8 @@
     --shadow: 0px 4px 8px hsl(0 0% 0% / 0.4);
     --shadow-md: 0px 6px 16px hsl(0 0% 0% / 0.5);
     --shadow-lg: 0px 8px 24px hsl(0 0% 0% / 0.6);
-    --shadow-glow: 0 0 20px hsl(142 70% 50% / 0.3);
-    --shadow-glow-accent: 0 0 20px hsl(120 70% 50% / 0.3);
+    --shadow-glow: 0 0 20px hsl(185 80% 50% / 0.3);
+    --shadow-glow-accent: 0 0 20px hsl(320 85% 55% / 0.3);
 
     --radius: 0.75rem;
   }
@@ -100,9 +100,9 @@
 /* Globe glow effect */
 .globe-glow {
   box-shadow: 
-    0 0 60px 20px hsl(142 70% 50% / 0.15),
-    0 0 100px 40px hsl(142 70% 50% / 0.1),
-    0 0 140px 60px hsl(142 70% 50% / 0.05);
+    0 0 60px 20px hsl(185 80% 50% / 0.15),
+    0 0 100px 40px hsl(185 80% 50% / 0.1),
+    0 0 140px 60px hsl(185 80% 50% / 0.05);
 }
 
 /* Animations */
@@ -130,10 +130,10 @@
 
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 10px hsl(142 70% 50% / 0.5);
+    box-shadow: 0 0 10px hsl(185 80% 50% / 0.5);
   }
   50% {
-    box-shadow: 0 0 20px hsl(142 70% 50% / 0.8);
+    box-shadow: 0 0 20px hsl(185 80% 50% / 0.8);
   }
 }
 
